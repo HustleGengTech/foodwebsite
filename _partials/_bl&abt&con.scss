@@ -1,0 +1,230 @@
+#blog{
+    padding: 150px 150px 0 150px;
+
+    .blog-box{
+        display: flex;
+        align-items:center ;
+        width: 100%;
+        position: relative;
+        padding-bottom: 90px;
+
+        h1{
+            position: absolute;
+            top: -40px;
+            left: 0;
+            font-size: 70px;
+            font-weight: 700;
+            color: brown;
+            z-index: -9;
+        }
+    }
+    .blog-img{
+        width: 50%;
+        margin-right: 40px;
+
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+    .blog-details{
+        width: 50%;
+
+        a{
+            text-decoration: none;
+            font-size: 11px;
+            color: red;
+            font-weight: 700;
+            position: relative;
+
+            &:hover{
+                color: aqua;
+                transition: 0.3s;
+            }
+
+            &::after{
+                content: "";
+                width: 50px;
+                height: 1px;
+                background-color: black;
+                position: absolute;
+                top: 4px;
+                right: -60px;
+            }
+        }
+    }
+    
+}
+/*ABOUT US STYLING*/
+#about-header{
+    background-image: url("../img/banner/b20.jpg");
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+
+    h2{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+}
+#about-head{
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 50%;
+        height: 50vh;
+    }
+    div{
+        padding-left: 40px;
+    }
+
+}
+/*STYLING FOR CONTACT US*/
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3,h2{
+        padding-bottom: 15px;
+    }
+
+    i{
+        padding-bottom: 10px;
+    }
+
+    .map{
+        width: 55%;
+        height: 400px;
+
+    }
+}
+/*STYLING FOR FORM*/
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid gray;
+
+    form{
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2{
+            font-size: 25px;
+        }
+
+        input,textarea {
+            width: 100%;
+            padding: 12px 15px;
+            outline: none;
+            margin-bottom: 20px;
+            border: 1px solid blue;
+        }
+        button{
+            background-color: crimson;
+            color: black;
+        }
+    }
+    .people div {
+        padding-bottom: 25px;
+        display: flex;
+        align-items: flex-start;
+
+        p{
+            margin: 0;
+            font-size: 13px;
+            line-height: 25px;
+
+            span{
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                color: green;
+            }
+        }
+        img{
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 15px;
+        }
+    }
+        
+}
+
+@media(max-width:799px){
+    #about-head{
+        width: 100%;
+        margin: 0;
+        img{
+            height: 40vh;
+        }
+    }
+    #about-header{
+        width: 100%;
+    }
+    #contact-details{
+        
+        width: 100%;
+
+        .map iframe{
+            display: none;
+        }
+    }
+    #form-details {
+        padding: 40px;
+        border: 1px solid red;
+
+        form{
+            width: 50%;
+        }
+    }
+    
+}
+@media(max-width:477px){
+    #about-header{
+        h2{
+            font-size: 37px;
+            color: gold;
+        }
+        p{
+            font-size: 30px;
+            color: tomato;
+            background-color: black;
+        }
+    }
+    #about-head{
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        div{
+            padding-left: 0;
+        }
+    }
+    #form-details{
+        flex-direction: column;
+        
+        form{
+            width: 100%;
+            padding-bottom: 12px;
+        }
+    }
+}
